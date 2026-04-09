@@ -1,0 +1,92 @@
+[
+ {
+  "id": 1,
+  "name": "홍길동",
+  "email": "test@test.com",
+  "password": "1234"
+ },
+ {
+  "id": 2,
+  "name": "김영희",
+  "email": "kim@example.com",
+  "password": "abcd1234"
+ },
+ {
+  "id": 3,
+  "name": "이철수",
+  "email": "lee@example.com",
+  "password": "qwer5678"
+ },
+ {
+  "id": 4,
+  "name": "박지민",
+  "email": "park.jimin@mail.com",
+  "password": "pass0000"
+ },
+ {
+  "id": 5,
+  "name": "최수진",
+  "email": "choi.sujin@example.com",
+  "password": "hello99"
+ },
+ {
+  "id": 6,
+  "name": "정민호",
+  "email": "jung.minho@test.com",
+  "password": "minho123"
+ },
+ {
+  "id": 7,
+  "name": "한소희",
+  "email": "han.sohee@gmail.com",
+  "password": "sohee456"
+ },
+ {
+  "id": 8,
+  "name": "윤도현",
+  "email": "yoon.dohyun@example.com",
+  "password": "dohyun78"
+ },
+ {
+  "id": 9,
+  "name": "송미래",
+  "email": "song.mirae@mail.com",
+  "password": "mirae2024"
+ },
+ {
+  "id": 10,
+  "name": "강준서",
+  "email": "kang.junseo@test.com",
+  "password": "junseo11"
+ },
+ {
+  "id": 11,
+  "name": "오서연",
+  "email": "oh.seoyeon@example.com",
+  "password": "seoyeon22"
+ },
+ {
+  "id": 12,
+  "name": "임현우",
+  "email": "lim.hyunwoo@gmail.com",
+  "password": "hyunwoo33"
+ },
+ {
+  "id": 13,
+  "name": "배수아",
+  "email": "bae.sua@mail.com",
+  "password": "sua4444"
+ },
+ {
+  "id": 14,
+  "name": "신동욱",
+  "email": "shin.dongwook@test.com",
+  "password": "dongwook5"
+ },
+ {
+  "id": 15,
+  "name": "조예린",
+  "email": "jo.yerin@example.com",
+  "password": "yerin666"
+ }
+]

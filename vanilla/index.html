@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MALL - 온라인 쇼핑몰</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+   <!-- 히어로 배너 슬라이더 (figma-make: Slider, 4배너, prev/next/play, autoplay 5s) -->
+   <section class="hero-section hero-group">
+    <div class="swiper hero-swiper" id="heroSwiper">
+     <div class="swiper-wrapper">
+      <div class="swiper-slide hero-slide">
+       <img src="https://picsum.photos/id/1/1080/600" alt="새로운 쇼핑의 시작" />
+       <div class="hero-content">
+        <h1>새로운 쇼핑의 시작</h1>
+        <p>매일 업데이트되는 신상품과 특별한 혜택을 만나보세요.</p>
+        <a href="products.html" class="btn btn-primary btn-lg btn-rounded">지금 쇼핑하기</a>
+       </div>
+      </div>
+      <div class="swiper-slide hero-slide">
+       <img src="https://picsum.photos/id/20/1080/600" alt="2024 S/S 컬렉션" />
+       <div class="hero-content">
+        <h1>2024 S/S 컬렉션</h1>
+        <p>트렌디한 스타일로 당신의 봄을 완성하세요.</p>
+        <a href="products.html?tag=new" class="btn btn-primary btn-lg btn-rounded">컬렉션 보기</a>
+       </div>
+      </div>
+      <div class="swiper-slide hero-slide">
+       <img src="https://picsum.photos/id/42/1080/600" alt="시즌 오프 세일" />
+       <div class="hero-content">
+        <h1>시즌 오프 세일</h1>
+        <p>최대 70% 할인, 놓칠 수 없는 기회!</p>
+        <a href="products.html?tag=sale" class="btn btn-primary btn-lg btn-rounded"
+         >세일 입장하기</a
+        >
+       </div>
+      </div>
+      <div class="swiper-slide hero-slide">
+       <img src="https://picsum.photos/id/58/1080/600" alt="프리미엄 에디션" />
+       <div class="hero-content">
+        <h1>프리미엄 에디션</h1>
+        <p>엄선된 소재와 디자인, 차원이 다른 품격.</p>
+        <a href="products.html?category=premium" class="btn btn-primary btn-lg btn-rounded"
+         >자세히 보기</a
+        >
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="hero-controls">
+     <button type="button" class="hero-control-btn" id="heroPrev" aria-label="이전 슬라이드">
+      <svg
+       xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+      >
+       <path d="m15 18-6-6 6-6" />
+      </svg>
+     </button>
+     <button type="button" class="hero-control-btn" id="heroPlay" aria-label="재생/일시정지">
+      <span class="icon-play" style="display: none"
+       ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <polygon points="6 3 20 12 6 21 6 3" /></svg></span
+      ><span class="icon-pause"
+       ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <rect x="14" y="4" width="4" height="16" rx="1" />
+        <rect x="6" y="4" width="4" height="16" rx="1" /></svg
+      ></span>
+     </button>
+     <button type="button" class="hero-control-btn" id="heroNext" aria-label="다음 슬라이드">
+      <svg
+       xmlns="http://www.w3.org/2000/svg"
+       width="20"
+       height="20"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+      >
+       <path d="m9 18 6-6-6-6" />
+      </svg>
+     </button>
+    </div>
+   </section>
+
+   <!-- 퀵 카테고리 (figma-make: Menu, ThumbsUp, Percent, Sparkles, Dumbbell, ShoppingBag, Footprints) -->
+   <section class="container quick-categories-section">
+    <div class="quick-categories">
+     <a href="products.html" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+       </svg>
+      </div>
+      <span>전체 보기</span>
+     </a>
+     <a href="products.html?tag=recommended" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="M7 10v12" />
+        <path
+         d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"
+        />
+       </svg>
+      </div>
+      <span>추천</span>
+     </a>
+     <a href="products.html?tag=sale" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <line x1="19" x2="5" y1="5" y2="19" />
+        <circle cx="6.5" cy="6.5" r="2.5" />
+        <circle cx="17.5" cy="17.5" r="2.5" />
+       </svg>
+      </div>
+      <span>세일</span>
+     </a>
+     <a href="products.html?category=beauty" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path
+         d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+        />
+        <path d="M20 3v4" />
+        <path d="M22 5h-4" />
+        <path d="M4 17v2" />
+        <path d="M5 18H3" />
+       </svg>
+      </div>
+      <span>뷰티</span>
+     </a>
+     <a href="products.html?category=sports" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="M14.4 14.4 9.6 9.6" />
+        <path
+         d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"
+        />
+        <path d="m21.5 21.5-1.4-1.4" />
+        <path d="M3.9 3.9 2.5 2.5" />
+        <path
+         d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"
+        />
+       </svg>
+      </div>
+      <span>스포츠</span>
+     </a>
+     <a href="products.html?tag=outlet" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+        <path d="M3 6h18" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+       </svg>
+      </div>
+      <span>아울렛</span>
+     </a>
+     <a href="products.html?category=shoes" class="quick-category">
+      <div class="quick-category-icon">
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path
+         d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"
+        />
+        <path
+         d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"
+        />
+        <path d="M16 17h4" />
+        <path d="M4 13h4" />
+       </svg>
+      </div>
+      <span>슈즈</span>
+     </a>
+    </div>
+   </section>
+
+   <!-- 홈페이지 메인 섹션 래퍼 (figma-make: container mx-auto px-4 flex flex-col gap-32) -->
+   <div class="container home-sections-wrap">
+    <!-- 인기 상품 섹션 (figma-make: 슬라이더 + prev/next 버튼) -->
+    <section class="section-popular product-slider-section">
+     <div class="section-header">
+      <h2>인기 상품</h2>
+      <a href="products.html"
+       >더보기
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="section-header-chevron"
+       >
+        <path d="m9 18 6-6-6-6" /></svg
+      ></a>
+     </div>
+     <div class="product-slider-wrap">
+      <button
+       type="button"
+       class="product-slider-btn product-slider-prev"
+       id="popularPrev"
+       aria-label="이전 상품"
+      >
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="m15 18-6-6 6-6" />
+       </svg>
+      </button>
+      <div class="swiper product-swiper product-swiper-popular" id="popularSwiper">
+       <div class="swiper-wrapper" id="popularProducts">
+        <!-- 상품 카드가 main.js에서 swiper-slide로 추가됨 -->
+       </div>
+      </div>
+      <button
+       type="button"
+       class="product-slider-btn product-slider-next"
+       id="popularNext"
+       aria-label="다음 상품"
+      >
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="m9 18 6-6-6-6" />
+       </svg>
+      </button>
+     </div>
+    </section>
+
+    <!-- 시즌 추천 섹션 -->
+    <section class="section-seasonal product-slider-section">
+     <div class="section-header">
+      <h2>시즌 추천</h2>
+      <a href="products.html?tag=seasonal"
+       >더보기
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="section-header-chevron"
+       >
+        <path d="m9 18 6-6-6-6" /></svg
+      ></a>
+     </div>
+     <div class="product-slider-wrap">
+      <button
+       type="button"
+       class="product-slider-btn product-slider-prev"
+       id="seasonalPrev"
+       aria-label="이전 상품"
+      >
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="m9 18 6-6-6-6" />
+       </svg>
+      </button>
+      <div class="swiper product-swiper product-swiper-seasonal" id="seasonalSwiper">
+       <div class="swiper-wrapper" id="seasonalProducts">
+        <!-- 상품 카드가 main.js에서 swiper-slide로 추가됨 -->
+       </div>
+      </div>
+      <button
+       type="button"
+       class="product-slider-btn product-slider-next"
+       id="seasonalNext"
+       aria-label="다음 상품"
+      >
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+       >
+        <path d="m9 18 6-6-6-6" />
+       </svg>
+      </button>
+     </div>
+    </section>
+
+    <!-- 이벤트 & 기획전 (data/project.json) -->
+    <section class="section-events">
+     <div class="section-header">
+      <h2>이벤트 & 기획전</h2>
+      <a href="products.html"
+       >더보기
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="section-header-chevron"
+       >
+        <path d="m9 18 6-6-6-6" />
+       </svg>
+      </a>
+     </div>
+     <div class="events-inner" id="eventSection">
+      <!-- main.js에서 project.json 로드 후 피처드 + 나머지 이벤트 렌더 -->
+     </div>
+    </section>
+
+    <!-- 세일 배너 (figma-make Sale Banner) -->
+    <section class="section-sale-banner">
+     <div class="sale-banner">
+      <div class="sale-banner-bg">
+       <img src="https://picsum.photos/id/48/1080/600" alt="Sale Background" />
+       <div class="sale-banner-overlay"></div>
+      </div>
+      <div class="sale-banner-inner container">
+       <div class="sale-banner-text">
+        <span class="sale-banner-badge">LIMITED TIME OFFER</span>
+        <h3>이번 주 <span class="text-orange-500">특별 세일</span><br />놓치지 마세요!</h3>
+        <p>인기 상품 최대 50% 할인부터 추가 쿠폰 혜택까지.<br />지금 바로 확인하고 득템하세요.</p>
+        <div class="sale-banner-buttons">
+         <a href="products.html?tag=sale" class="btn btn-sale-primary">세일 상품 보기</a>
+         <a href="coming-soon.html?from=index" class="btn btn-sale-outline">쿠폰 받기</a>
+        </div>
+       </div>
+       <div class="sale-banner-decor" aria-hidden="true">
+        <div class="sale-banner-circle">
+         <span class="sale-banner-circle-up">UP TO</span>
+         <span class="sale-banner-circle-pct">50%</span>
+         <span class="sale-banner-circle-off">OFF</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- 매거진 섹션 (figma-make HomePage Magazine Section) -->
+    <section class="section-magazine">
+     <div class="magazine-section-header">
+      <h2>매거진</h2>
+      <a href="magazine.html" class="magazine-section-link"
+       >전체보기
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="section-header-chevron"
+       >
+        <path d="m9 18 6-6-6-6" />
+       </svg>
+      </a>
+     </div>
+     <div class="magazine-grid" id="magazinePreview">
+      <!-- main.js에서 매거진 렌더 (Featured + Side Articles) -->
+     </div>
+    </section>
+   </div>
+   <!-- /home-sections-wrap -->
+  </main>
+
+  <app-footer></app-footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="js/app.js" data-page="main"></script>
+ </body>
+</html>

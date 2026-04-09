@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상품 목록 - MALL</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+  <!-- 상품 목록 페이지 (figma-make ProductListPage 구조) -->
+  <main class="products-page">
+   <div class="container page-content">
+    <!-- 상단: 타이틀, 검색 결과, 정렬 -->
+    <div class="products-top">
+     <div>
+      <h1 id="productsTitle">전체 상품</h1>
+      <span id="productsCount" class="products-count">(6개)</span>
+      <div id="searchClear" style="display: none">
+       <button type="button" class="link-btn" id="clearSearchBtn">전체 상품 보기</button>
+      </div>
+     </div>
+     <div class="products-controls">
+      <select id="sortSelect" aria-label="정렬">
+       <option value="popular">인기순</option>
+       <option value="price-low">가격 낮은순</option>
+       <option value="price-high">가격 높은순</option>
+       <option value="newest">최신순</option>
+      </select>
+     </div>
+    </div>
+
+    <div class="products-layout">
+     <!-- 필터 사이드바 -->
+     <aside class="filters" aria-label="상품 필터">
+      <h3>필터</h3>
+
+      <div class="filter-group">
+       <h4>카테고리</h4>
+       <label><input type="checkbox" value="electronics" /> 전자제품</label>
+       <label><input type="checkbox" value="clothing" /> 의류</label>
+       <label><input type="checkbox" value="food" /> 식품</label>
+       <label><input type="checkbox" value="other" /> 기타</label>
+      </div>
+
+      <div class="filter-group">
+       <h4>가격 범위</h4>
+       <input type="range" id="priceRange" min="0" max="500000" value="500000" step="10000" />
+       <span id="priceValue">500,000원</span>
+      </div>
+
+      <div class="filter-group" id="activeFilters" style="display: none">
+       <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem">
+        <span style="font-size: 0.875rem; font-weight: 500">적용 중:</span>
+        <button type="button" class="link-btn" id="clearFiltersBtn">초기화</button>
+       </div>
+      </div>
+     </aside>
+
+     <!-- 상품 그리드 -->
+     <div class="products-main">
+      <div class="products-grid" id="productsGrid">
+       <!-- 상품 카드가 products.js에서 동적으로 추가됨 -->
+      </div>
+      <nav class="pagination-wrap" id="paginationWrap" aria-label="상품 목록 페이지">
+       <div class="pagination" id="pagination"></div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </main>
+  <app-footer></app-footer>
+  <script type="module" src="js/app.js" data-page="products"></script>
+ </body>
+</html>

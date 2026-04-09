@@ -1,0 +1,4 @@
+/* 스타일 진입점 - 순서 중요 (fonts → tailwind+theme → components) */
+@import "./fonts.css";
+@import "./tailwind.css";
+@import "./components.css";

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상품 상세 - MALL</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+  <!-- 상품 상세 (figma-make ProductDetailPage 구조) -->
+  <main class="product-detail-page">
+   <div class="container page-content">
+    <div class="product-detail-layout" id="productDetailLayout">
+     <!-- 좌측: 갤러리 -->
+     <div class="product-gallery">
+      <div class="product-main-image">
+       <img
+        id="mainImage"
+        src=""
+        alt=""
+        onerror="this.src='https://via.placeholder.com/600x600?text=No+Image'"
+       />
+       <div id="soldOutOverlay" class="soldout-overlay" style="display: none">
+        <span class="soldout-text">품절</span>
+       </div>
+      </div>
+      <div class="product-thumbnails" id="thumbnails">
+       <!-- 썸네일이 product-detail.js에서 추가됨 -->
+      </div>
+     </div>
+
+     <!-- 우측: 상품 정보 -->
+     <div class="product-info">
+      <h1 id="productName"></h1>
+      <div class="product-rating-row">
+       <div class="product-stars" id="productStars"></div>
+       <span id="reviewLink" class="review-link"></span>
+      </div>
+      <div class="product-price-row">
+       <span id="discountRate" class="discount-rate" style="display: none"></span>
+       <span id="originalPrice" class="original-price" style="display: none"></span>
+       <span id="currentPrice" class="current-price"></span>
+      </div>
+
+      <div class="product-delivery">
+       <span class="label">배송 정보</span>
+       <div>
+        <p>🚚 무료배송 (50,000원 이상 구매 시)</p>
+        <p class="text-muted">도서산간 지역 추가비용 발생 가능</p>
+       </div>
+      </div>
+
+      <div class="product-quantity" id="quantitySection">
+       <span class="label">수량</span>
+       <div class="quantity-control">
+        <button type="button" id="qtyMinus">−</button>
+        <span id="qtyValue">1</span>
+        <button type="button" id="qtyPlus">+</button>
+       </div>
+      </div>
+
+      <div class="product-cta">
+       <button type="button" id="addToCartBtn" class="btn btn-outline btn-lg btn-full">
+        장바구니 담기
+       </button>
+       <a
+        href="cart.html"
+        id="buyNowBtn"
+        class="btn btn-primary btn-lg btn-full"
+        style="display: inline-flex"
+        >바로 구매하기</a
+       >
+       <button type="button" class="btn btn-outline btn-icon" aria-label="찜하기">♡</button>
+      </div>
+
+      <div class="product-extra-info">
+       <div><span>🛡️</span> 100% 정품 보장</div>
+       <div><span>🔗</span> 친구에게 공유하기</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 탭: 상세정보 / 리뷰 -->
+    <div class="product-tabs">
+     <div class="tab-buttons">
+      <button type="button" class="tab-btn active" data-tab="detail">상세정보</button>
+      <button type="button" class="tab-btn" data-tab="review">
+       리뷰 (<span id="reviewCount">0</span>)
+      </button>
+     </div>
+     <div class="tab-content" id="tabDetail">
+      <div class="detail-content">
+       <p>
+        이 상품은 최고의 품질을 자랑합니다.<br />엄선된 소재와 장인의 손길로 만들어진 프리미엄
+        제품입니다.<br />일상 생활에서 편안하게 사용할 수 있도록 디자인되었습니다.
+       </p>
+       <div class="detail-image">
+        <img id="detailImage" src="" alt="상세 이미지" />
+       </div>
+       <table class="detail-table">
+        <tr>
+         <th>제품명</th>
+         <td id="detailProductName">-</td>
+        </tr>
+        <tr>
+         <th>제조국</th>
+         <td>대한민국</td>
+        </tr>
+        <tr>
+         <th>소재</th>
+         <td>상세페이지 참조</td>
+        </tr>
+        <tr>
+         <th>취급시 주의사항</th>
+         <td>세탁 시 단독 세탁 권장</td>
+        </tr>
+       </table>
+      </div>
+     </div>
+     <div class="tab-content" id="tabReview" style="display: none">
+      <div class="review-summary">
+       <div class="review-score">
+        <span id="reviewScoreNum">0</span>
+        <div class="review-stars" id="reviewStars"></div>
+        <p id="reviewCountText">0개의 리뷰</p>
+       </div>
+      </div>
+      <div class="review-list">
+       <div class="review-item">
+        <div class="review-header">
+         <div class="review-avatar">김**</div>
+         <div class="review-meta">
+          <p class="review-author">아주 만족합니다</p>
+          <div class="review-stars-small">★★★★★</div>
+         </div>
+         <span class="review-date">2023.10.15</span>
+        </div>
+        <p class="review-body">배송도 빠르고 상품 품질이 너무 좋습니다. 재구매 의사 있습니다!</p>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 함께 보면 좋은 상품 -->
+    <section class="related-products">
+     <h2>이 상품과 함께 보면 좋은 상품</h2>
+     <div class="products-grid" id="relatedProducts">
+      <!-- product-detail.js에서 추가 -->
+     </div>
+    </section>
+   </div>
+  </main>
+  <app-footer></app-footer>
+  <script type="module" src="js/app.js" data-page="product-detail"></script>
+ </body>
+</html>

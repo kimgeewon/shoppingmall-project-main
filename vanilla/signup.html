@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입 - MALL</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+<main class="auth-page">
+   <div class="auth-card">
+    <div class="auth-header">
+     <h1>MALL</h1>
+     <h2>회원가입</h2>
+    </div>
+
+    <form id="signupForm" class="auth-form">
+     <div class="form-group">
+      <label>이름 *</label>
+      <input type="text" id="name" class="form-input" placeholder="홍길동" required />
+      <p class="form-helper" id="nameError"></p>
+     </div>
+     <div class="form-group">
+      <label>이메일 *</label>
+      <input type="email" id="email" class="form-input" placeholder="example@email.com" required />
+      <p class="form-helper" id="emailError"></p>
+     </div>
+     <div class="form-group">
+      <label>비밀번호 *</label>
+      <input
+       type="password"
+       id="password"
+       class="form-input"
+       placeholder="최소 4자 이상"
+       required
+       minlength="4"
+      />
+      <p class="form-helper" id="passwordError"></p>
+     </div>
+     <div class="form-group">
+      <label>비밀번호 확인 *</label>
+      <input
+       type="password"
+       id="passwordConfirm"
+       class="form-input"
+       placeholder="비밀번호 재입력"
+       required
+      />
+      <p class="form-helper" id="passwordConfirmError"></p>
+     </div>
+     <div class="auth-checkboxes">
+      <label class="auth-checkbox"
+       ><input type="checkbox" required /> <span>[필수] 이용약관 동의</span></label
+      >
+      <label class="auth-checkbox"
+       ><input type="checkbox" required /> <span>[필수] 개인정보 수집 및 이용 동의</span></label
+      >
+     </div>
+     <button type="submit" class="btn btn-primary btn-lg btn-full" id="signupBtn">회원가입</button>
+    </form>
+
+    <p class="auth-footer">이미 계정이 있으신가요? <a href="login.html">로그인</a></p>
+   </div>
+  </main>
+
+  <div id="messageModal" class="modal-backdrop" style="display: none">
+   <div class="modal-content">
+    <button type="button" class="modal-close" id="modalClose">
+     <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+     >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+     </svg>
+    </button>
+    <div class="modal-icon success">✓</div>
+    <h3 class="modal-title">회원가입 완료</h3>
+    <p class="modal-desc">성공적으로 회원가입이 되었습니다. 로그인해주세요.</p>
+    <button type="button" class="btn btn-primary btn-lg btn-full" id="modalConfirm">확인</button>
+   </div>
+  </div>
+  <app-footer></app-footer>
+<script type="module" src="js/app.js" data-page="signup"></script>
+ </body>
+</html>

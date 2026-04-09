@@ -1,0 +1,42 @@
+/* 디자인 시스템 - theme.css
+ * @theme: Tailwind v4 전용 디자인 토큰
+ * --font-sans, --color-* 는 Tailwind 유틸리티와 components.css에서 사용
+ */
+@theme {
+  /* 폰트 */
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+
+  /* 브랜드 컬러 - Primary (블랙 계열) */
+  --color-primary: #000000;
+  --color-primary-dark: #333333;
+  --color-primary-light: #666666;
+  --color-primary-hover: #1a1a1a;
+
+  /* 브랜드 컬러 - Secondary (오렌지 액센트) */
+  --color-secondary: #f97316;
+  --color-secondary-dark: #ea580c;
+  --color-secondary-light: #ffedd5;
+  --color-secondary-hover: #ea580c;
+
+  /* 시맨틱 컬러 - 텍스트/배경 */
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+  --color-bg: #ffffff;
+  --color-bg-muted: #f9fafb;
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* 시맨틱 컬러 - Destructive (삭제/에러/경고) */
+  --color-destructive: #ef4444;
+  --color-destructive-muted: #fef2f2;
+  --color-destructive-hover: #dc2626;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}

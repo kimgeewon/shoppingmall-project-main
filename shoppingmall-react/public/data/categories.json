@@ -1,0 +1,9 @@
+{
+  "categories": [
+    { "id": "all", "name": "전체", "icon": "LayoutGrid" },
+    { "id": "electronics", "name": "전자제품", "icon": "Monitor" },
+    { "id": "clothing", "name": "의류", "icon": "Shirt" },
+    { "id": "food", "name": "식품", "icon": "Apple" },
+    { "id": "other", "name": "기타", "icon": "MoreHorizontal" }
+  ]
+}

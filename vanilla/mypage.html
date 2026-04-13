@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지 - MALL</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+  <main class="mypage-page">
+   <div class="container page-content">
+    <h1 class="mypage-title">마이페이지</h1>
+
+    <div class="mypage-layout">
+     <aside class="mypage-sidebar">
+      <div class="mypage-profile">
+       <div class="mypage-avatar" id="mypageAvatar">👤</div>
+       <h2 id="mypageUserName">회원님</h2>
+       <p id="mypageUserEmail"></p>
+       <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm btn-full">정보 수정</a>
+      </div>
+      <nav class="mypage-menu">
+       <div class="mypage-menu-title">마이 쇼핑</div>
+       <ul>
+        <li class="active"><a href="order-history.html">주문/배송 조회</a></li>
+        <li><a href="coming-soon.html?from=mypage">취소/교환/반품</a></li>
+        <li><a href="coming-soon.html?from=mypage">찜한 상품</a></li>
+        <li><a href="coming-soon.html?from=mypage">쿠폰함</a></li>
+        <li><a href="coming-soon.html?from=mypage">포인트</a></li>
+       </ul>
+      </nav>
+     </aside>
+
+     <div class="mypage-content">
+      <section class="mypage-section">
+       <h3>나의 쇼핑 활동</h3>
+       <div class="mypage-stats">
+        <a href="coming-soon.html?from=mypage" class="mypage-stat-card">
+         <div class="stat-label">쿠폰</div>
+         <div class="stat-value">3 <span class="stat-unit">장</span></div>
+        </a>
+        <a href="coming-soon.html?from=mypage" class="mypage-stat-card">
+         <div class="stat-label">포인트</div>
+         <div class="stat-value">2,500 <span class="stat-unit">P</span></div>
+        </a>
+        <a href="coming-soon.html?from=mypage" class="mypage-stat-card">
+         <div class="stat-label">관심상품</div>
+         <div class="stat-value">12 <span class="stat-unit">개</span></div>
+        </a>
+       </div>
+      </section>
+
+      <section class="mypage-section">
+       <div class="mypage-section-header">
+        <h3>최근 주문 내역</h3>
+        <a href="order-history.html" class="btn btn-link">더보기 &gt;</a>
+       </div>
+       <div class="mypage-orders">
+        <div class="mypage-order-card">
+         <div class="order-card-header">
+          <span>2023.10.20 | 주문번호 20231020-789012</span>
+          <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm">주문상세</a>
+         </div>
+         <div class="order-card-body">
+          <div class="order-card-image">
+           <img src="https://picsum.photos/id/21/400/300" alt="Product" />
+          </div>
+          <div class="order-card-info">
+           <div class="order-status">
+            <span class="badge badge-hot">배송중</span> <span>|</span>
+            <span class="order-date">10/22 도착 예정</span>
+           </div>
+           <h4>베이직 데님 청바지 외 1건</h4>
+           <p>89,000원</p>
+          </div>
+          <div class="order-card-actions">
+           <a href="coming-soon.html?from=mypage" class="btn btn-primary btn-sm">배송조회</a>
+           <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm">교환/반품</a>
+          </div>
+         </div>
+        </div>
+        <div class="mypage-order-card">
+         <div class="order-card-header">
+          <span>2023.10.15 | 주문번호 20231015-123456</span>
+          <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm">주문상세</a>
+         </div>
+         <div class="order-card-body">
+          <div class="order-card-image">
+           <img src="https://picsum.photos/id/28/400/300" alt="Product" />
+          </div>
+          <div class="order-card-info">
+           <div class="order-status">
+            <span class="font-bold">배송완료</span> <span>|</span>
+            <span class="order-date">10/17 도착</span>
+           </div>
+           <h4>프로 러닝화 v3</h4>
+           <p>129,000원</p>
+          </div>
+          <div class="order-card-actions">
+           <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm">리뷰작성</a>
+           <a href="coming-soon.html?from=mypage" class="btn btn-outline btn-sm">재구매</a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+    </div>
+   </div>
+  </main>
+  <app-footer></app-footer>
+  <script type="module" src="js/app.js" data-page="mypage"></script>
+ </body>
+</html>

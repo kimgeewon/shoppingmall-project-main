@@ -1,0 +1,102 @@
+[
+ {
+  "id": 1,
+  "title": "2024 S/S 시즌 오프 세일",
+  "description": "봄·여름 시즌 상품 최대 70% 할인. 기간 한정 특가.",
+  "status": "active",
+  "startDate": "2024-02-01",
+  "endDate": "2024-03-31",
+  "image": "https://picsum.photos/id/1/800/480",
+  "tag": "sale"
+ },
+ {
+  "id": 2,
+  "title": "프리미엄 에디션 런칭",
+  "description": "엄선된 프리미엄 라인업 신규 오픈.",
+  "status": "active",
+  "startDate": "2024-03-01",
+  "endDate": "2024-12-31",
+  "image": "https://picsum.photos/id/20/800/480",
+  "tag": "premium"
+ },
+ {
+  "id": 3,
+  "title": "뷰티 위크",
+  "description": "뷰티 카테고리 전 상품 20% 추가 할인.",
+  "status": "active",
+  "startDate": "2024-03-10",
+  "endDate": "2024-03-17",
+  "image": "https://picsum.photos/id/26/800/480",
+  "tag": "beauty"
+ },
+ {
+  "id": 4,
+  "title": "스포츠 기어 프로모션",
+  "description": "운동화, 의류, 용품 할인 및 무료 배송.",
+  "status": "active",
+  "startDate": "2024-03-15",
+  "endDate": "2024-04-15",
+  "image": "https://picsum.photos/id/28/800/480",
+  "tag": "sports"
+ },
+ {
+  "id": 5,
+  "title": "아울렛 특가존",
+  "description": "재고 정리 상품 한정 특가. 선착순 마감.",
+  "status": "active",
+  "startDate": "2024-01-01",
+  "endDate": "2024-06-30",
+  "image": "https://picsum.photos/id/42/800/480",
+  "tag": "outlet"
+ },
+ {
+  "id": 6,
+  "title": "신규 회원 웰컴 쿠폰",
+  "description": "가입 시 1만원 할인 쿠폰 + 무료배송.",
+  "status": "active",
+  "startDate": "2024-01-01",
+  "endDate": "2024-12-31",
+  "image": "https://picsum.photos/id/43/800/480",
+  "tag": "new"
+ },
+ {
+  "id": 7,
+  "title": "주말 한정 플래시 세일",
+  "description": "매주 토·일 0시~24시 타임 세일.",
+  "status": "scheduled",
+  "startDate": "2024-04-01",
+  "endDate": "2024-06-30",
+  "image": "https://picsum.photos/id/48/800/480",
+  "tag": "sale"
+ },
+ {
+  "id": 8,
+  "title": "가을 시즌 프리뷰",
+  "description": "가을 트렌드 컬렉션 사전 공개.",
+  "status": "scheduled",
+  "startDate": "2024-08-01",
+  "endDate": "2024-08-31",
+  "image": "https://picsum.photos/id/52/800/480",
+  "tag": "seasonal"
+ },
+ {
+  "id": 9,
+  "title": "블랙프라이데이",
+  "description": "연말 최대 할인 이벤트. 전 카테고리 참여.",
+  "status": "scheduled",
+  "startDate": "2024-11-29",
+  "endDate": "2024-11-30",
+  "image": "https://picsum.photos/id/58/800/480",
+  "tag": "sale"
+ },
+ {
+  "id": 10,
+  "title": "연말 감사 대축제",
+  "description": "고객 감사 특별 할인 및 사은품 증정.",
+  "status": "ended",
+  "startDate": "2023-12-15",
+  "endDate": "2023-12-31",
+  "image": "https://picsum.photos/id/60/800/480",
+  "tag": "sale"
+ }
+]

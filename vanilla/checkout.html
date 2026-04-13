@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주문/결제 - MALL</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+ </head>
+ <body>
+  <app-header></app-header>
+<main class="checkout-page">
+   <div class="container page-content">
+    <h1 class="checkout-title">주문/결제</h1>
+
+    <div class="checkout-layout">
+     <div class="checkout-form-area">
+      <!-- 주문 상품 -->
+      <section class="checkout-section">
+       <h2>주문 상품</h2>
+       <div class="checkout-items" id="checkoutItems">
+        <!-- checkout.js에서 장바구니 기반으로 렌더 -->
+       </div>
+      </section>
+
+      <form id="checkout-form" class="checkout-form">
+       <!-- 배송 정보 -->
+       <section class="checkout-section">
+        <h2>배송 정보</h2>
+        <div class="form-row">
+         <div class="form-group">
+          <label>받는 분 *</label>
+          <input type="text" id="name" class="form-input" placeholder="이름" required />
+          <p class="form-helper" id="nameError"></p>
+         </div>
+         <div class="form-group">
+          <label>연락처 *</label>
+          <input type="tel" id="phone" class="form-input" placeholder="010-0000-0000" required />
+          <p class="form-helper" id="phoneError"></p>
+         </div>
+        </div>
+        <div class="form-group">
+         <label>주소 *</label>
+         <div class="address-row">
+          <input
+           type="text"
+           id="zipcode"
+           class="form-input"
+           placeholder="우편번호"
+           style="max-width: 120px"
+           readonly
+          />
+          <button type="button" class="btn btn-outline btn-sm" id="addressSearch">주소 검색</button>
+         </div>
+         <input
+          type="text"
+          id="address"
+          class="form-input"
+          placeholder="기본 주소"
+          required
+          style="margin-top: 0.5rem"
+         />
+         <input
+          type="text"
+          id="detailAddress"
+          class="form-input"
+          placeholder="상세 주소를 입력해주세요"
+          required
+          style="margin-top: 0.5rem"
+         />
+        </div>
+        <div class="form-group">
+         <label>배송 메모</label>
+         <input type="text" id="memo" class="form-input" placeholder="예: 문 앞에 놓아주세요" />
+        </div>
+       </section>
+
+       <!-- 결제 방법 -->
+       <section class="checkout-section">
+        <h2>결제 방법</h2>
+        <div class="payment-tabs">
+         <label class="payment-tab">
+          <input type="radio" name="paymentMethod" value="card" checked />
+          <span>신용카드</span>
+         </label>
+         <label class="payment-tab">
+          <input type="radio" name="paymentMethod" value="bank" />
+          <span>무통장 입금</span>
+         </label>
+         <label class="payment-tab">
+          <input type="radio" name="paymentMethod" value="transfer" />
+          <span>계좌이체</span>
+         </label>
+        </div>
+
+        <div id="cardOptions" class="payment-options">
+         <div class="form-row">
+          <div class="form-group">
+           <label>카드사 선택</label>
+           <select id="cardCompany" class="form-input">
+            <option value="">카드사를 선택해주세요</option>
+            <option value="shinhan">신한카드</option>
+            <option value="hyundai">현대카드</option>
+            <option value="samsung">삼성카드</option>
+            <option value="kb">KB국민카드</option>
+            <option value="lotte">롯데카드</option>
+           </select>
+          </div>
+          <div class="form-group">
+           <label>할부 기간</label>
+           <select id="cardInstallment" class="form-input">
+            <option value="0">일시불</option>
+            <option value="2">2개월</option>
+            <option value="3">3개월</option>
+            <option value="4">4개월</option>
+            <option value="5">5개월</option>
+            <option value="6">6개월</option>
+           </select>
+          </div>
+         </div>
+        </div>
+
+        <div id="bankOptions" class="payment-options" style="display: none">
+         <div class="form-group">
+          <label>입금 계좌</label>
+          <select id="depositBank" class="form-input">
+           <option value="">입금하실 계좌를 선택해주세요</option>
+           <option value="woori">우리은행 1002-000-000000 (주)피그마</option>
+           <option value="shinhan">신한은행 110-000-000000 (주)피그마</option>
+           <option value="kb">국민은행 123-0000-0000 (주)피그마</option>
+          </select>
+          <p class="form-helper" style="margin-top: 0.75rem">
+           * 주문 접수 후 24시간 이내에 입금 확인이 되지 않으면 주문이 자동으로 취소됩니다.
+          </p>
+         </div>
+        </div>
+
+        <div id="transferOptions" class="payment-options" style="display: none">
+         <div class="form-group">
+          <label>이체하실 은행</label>
+          <select id="transferBank" class="form-input">
+           <option value="">은행을 선택해주세요</option>
+           <option value="kakao">카카오뱅크</option>
+           <option value="toss">토스뱅크</option>
+           <option value="kb">KB국민은행</option>
+           <option value="shinhan">신한은행</option>
+           <option value="woori">우리은행</option>
+           <option value="nh">NH농협</option>
+          </select>
+          <p class="form-helper" style="margin-top: 0.75rem">
+           * 실시간 계좌이체는 결제 대행사 모듈을 통해 진행됩니다.
+          </p>
+         </div>
+        </div>
+       </section>
+      </form>
+     </div>
+
+     <div class="checkout-summary">
+      <div class="checkout-summary-box">
+       <h3>최종 결제 금액</h3>
+       <div class="checkout-summary-row">
+        <span>상품 합계</span>
+        <span id="checkoutSubtotal">0원</span>
+       </div>
+       <div class="checkout-summary-row">
+        <span>배송비</span>
+        <span id="checkoutShipping">0원</span>
+       </div>
+       <div class="checkout-summary-row">
+        <span>할인</span>
+        <span>-0원</span>
+       </div>
+       <div class="checkout-summary-total">
+        <span>총 결제 금액</span>
+        <span id="checkoutTotal">0원</span>
+       </div>
+       <div class="checkout-terms">
+        <label
+         ><input type="checkbox" id="terms" required /> 주문 내용을 확인하였으며, 정보 제공 등에
+         동의합니다.</label
+        >
+       </div>
+       <button
+        type="submit"
+        form="checkout-form"
+        class="btn btn-primary btn-lg btn-full"
+        id="submitBtn"
+       >
+        결제하기
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+
+  <div id="messageModal" class="modal-backdrop" style="display: none">
+   <div class="modal-content">
+    <button type="button" class="modal-close" id="modalClose">
+     <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+     >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+     </svg>
+    </button>
+    <div class="modal-icon success" id="modalIcon">✓</div>
+    <h3 class="modal-title" id="modalTitle">주문이 완료되었습니다!</h3>
+    <p class="modal-desc" id="modalDesc"></p>
+    <button type="button" class="btn btn-primary btn-lg btn-full" id="modalConfirm">확인</button>
+   </div>
+  </div>
+  <app-footer></app-footer>
+<script type="module" src="js/app.js" data-page="checkout"></script>
+ </body>
+</html>

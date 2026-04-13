@@ -1,0 +1,9 @@
+/* Tailwind v4 진입점
+ * source(none): 기본 스캔 비활성화, @source로 스캔 대상 지정
+ * @source: 유틸리티 클래스가 사용된 파일 경로 (트리쉐이킹)
+ */
+@import "tailwindcss" source(none);
+@import "./theme.css";
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import "tw-animate-css";

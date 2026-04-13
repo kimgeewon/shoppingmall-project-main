@@ -1,0 +1,131 @@
+/* 재사용 컴포넌트 스타일 (Tailwind @layer components)
+ * page-*, card-*, form-*: theme.css의 디자인 토큰 사용
+ */
+@layer components {
+  .page-container {
+    @apply container mx-auto px-4 py-8;
+  }
+
+  .page-centered {
+    @apply container mx-auto px-4 py-20 flex justify-center items-center min-h-[60vh];
+  }
+
+  .page-empty-state {
+    @apply flex flex-col items-center justify-center min-h-[60vh] px-4 text-center;
+  }
+
+  /* 폼/카드 */
+  .card-form {
+    @apply w-full max-w-md space-y-8 bg-bg p-8 rounded-xl shadow-lg border border-border-light;
+  }
+
+  .card-summary {
+    @apply bg-bg-muted p-6 rounded-xl border border-border sticky top-24;
+  }
+
+  /* 타이포그래피 */
+  .page-title {
+    @apply text-3xl font-bold text-primary;
+  }
+
+  .page-title-lg {
+    @apply text-4xl font-bold text-primary;
+  }
+
+  .page-subtitle {
+    @apply text-2xl font-bold text-primary;
+  }
+
+  .text-body {
+    @apply text-text-muted;
+  }
+
+  .text-body-secondary {
+    @apply text-text-subtle;
+  }
+
+  .text-label {
+    @apply text-sm font-medium text-text;
+  }
+
+  /* 그리드 */
+  .grid-articles {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .grid-products {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6;
+  }
+
+  /* 섹션 */
+  .section-heading {
+    @apply text-center mb-16;
+  }
+
+  .breadcrumb-nav {
+    @apply flex items-center gap-2 text-sm text-text-subtle mb-8;
+  }
+
+  .article-card {
+    @apply cursor-pointer flex flex-col gap-4;
+  }
+
+  .article-card-image {
+    @apply relative overflow-hidden rounded-xl aspect-[3/4];
+  }
+
+  .article-card-content {
+    @apply flex flex-col gap-2;
+  }
+
+  .article-card-badge {
+    @apply bg-bg/90 text-primary text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm;
+  }
+
+  .read-more-link {
+    @apply text-sm font-medium text-primary border-b border-primary pb-0.5 group-hover:text-secondary group-hover:border-secondary transition-all;
+  }
+
+  /* ComingSoon / Empty 상태 */
+  .empty-state-icon {
+    @apply bg-bg-muted p-6 rounded-full mb-6 animate-pulse;
+  }
+
+  .empty-state-title {
+    @apply text-3xl font-bold mb-4 text-primary;
+  }
+
+  .empty-state-desc {
+    @apply text-text-subtle max-w-md mb-8 leading-relaxed;
+  }
+
+  .empty-state-actions {
+    @apply flex gap-4;
+  }
+
+  /* 폼 레이아웃 */
+  .form-section {
+    @apply space-y-4;
+  }
+
+  .form-row {
+    @apply space-y-1;
+  }
+
+  .form-options {
+    @apply flex items-center justify-between text-sm;
+  }
+
+  .form-footer {
+    @apply text-center text-sm text-text-muted;
+  }
+
+  /* 주문 완료 */
+  .order-complete-layout {
+    @apply container mx-auto px-4 py-20 flex flex-col items-center justify-center text-center max-w-lg;
+  }
+
+  .order-summary-box {
+    @apply w-full bg-bg-muted rounded-lg p-6 mb-8 border border-border;
+  }
+}

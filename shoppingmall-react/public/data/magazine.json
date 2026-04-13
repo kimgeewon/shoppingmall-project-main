@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "category": "TREND REPORT",
+      "title": "2024 S/S 컬러 트렌드 분석",
+      "description": "올 봄, 거리를 물들일 핵심 컬러 팔레트와 스타일링 가이드.",
+      "image": "https://images.unsplash.com/photo-1764698192198-4cfb7188c6d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwZmFzaGlvbiUyMHBob3RvZ3JhcGh5JTIwc3RyZWV0JTIwc3R5bGV8ZW58MXx8fHwxNzY5ODUyNzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "date": "2024.03.15"
+    },
+    {
+      "id": "2",
+      "category": "DESIGNER NOTE",
+      "title": "미니멀리즘의 새로운 해석",
+      "description": "단순함 속에 숨겨진 디테일, 현대적인 미니멀 룩의 정석.",
+      "image": "https://images.unsplash.com/photo-1768818536330-62ae6edf84ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWwlMjBwb3J0cmFpdCUyMGFydGlzdGljJTIwbGlnaHRpbmd8ZW58MXx8fHwxNzY5ODUyNzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "date": "2024.03.10"
+    },
+    {
+      "id": "3",
+      "category": "STYLE GUIDE",
+      "title": "액세서리로 완성하는 룩",
+      "description": "작은 차이가 만드는 큰 변화, 이번 시즌 필수 액세서리.",
+      "image": "https://images.unsplash.com/photo-1573227896288-1d51c740a96e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwYWNjZXNzb3JpZXMlMjBkZXRhaWxzJTIwbGF5b3V0fGVufDF8fHwxNzY5ODUyNzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "date": "2024.03.05"
+    }
+  ]
+}

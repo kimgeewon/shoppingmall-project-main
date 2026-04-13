@@ -1,0 +1,249 @@
+[
+ {
+  "id": "1",
+  "name": "프리미엄 노이즈 캔슬링 헤드폰",
+  "price": 299000,
+  "originalPrice": 350000,
+  "rating": 4.8,
+  "reviewCount": 120,
+  "image": "https://picsum.photos/id/96/800/600",
+  "category": "electronics",
+  "badges": ["HOT", "SALE"]
+ },
+ {
+  "id": "2",
+  "name": "베이직 코튼 티셔츠",
+  "price": 29000,
+  "rating": 4.5,
+  "reviewCount": 85,
+  "image": "https://picsum.photos/id/21/800/600",
+  "category": "clothing",
+  "badges": ["NEW"]
+ },
+ {
+  "id": "3",
+  "name": "유기농 신선한 사과 1box",
+  "price": 35000,
+  "originalPrice": 40000,
+  "rating": 4.9,
+  "reviewCount": 230,
+  "image": "https://picsum.photos/id/108/800/600",
+  "category": "food",
+  "badges": ["SALE"]
+ },
+ {
+  "id": "4",
+  "name": "스마트 워치 Series 5",
+  "price": 159000,
+  "rating": 4.7,
+  "reviewCount": 50,
+  "image": "https://picsum.photos/id/175/800/600",
+  "category": "electronics",
+  "isSoldOut": true,
+  "badges": ["품절"]
+ },
+ {
+  "id": "5",
+  "name": "데일리 데님 청바지",
+  "price": 49000,
+  "rating": 4.6,
+  "reviewCount": 42,
+  "image": "https://picsum.photos/id/229/800/600",
+  "category": "clothing"
+ },
+ {
+  "id": "6",
+  "name": "프리미엄 올리브 오일",
+  "price": 18000,
+  "rating": 4.8,
+  "reviewCount": 15,
+  "image": "https://picsum.photos/id/312/800/600",
+  "category": "food"
+ },
+ {
+  "id": "7",
+  "name": "무선 블루투스 이어폰",
+  "price": 89000,
+  "originalPrice": 120000,
+  "rating": 4.6,
+  "reviewCount": 320,
+  "image": "https://picsum.photos/id/3/800/600",
+  "category": "electronics",
+  "badges": ["SALE", "HOT"]
+ },
+ {
+  "id": "8",
+  "name": "오버핏 후드 집업",
+  "price": 65000,
+  "rating": 4.7,
+  "reviewCount": 88,
+  "image": "https://picsum.photos/id/13/800/600",
+  "category": "clothing",
+  "badges": ["NEW"]
+ },
+ {
+  "id": "9",
+  "name": "냉동 그릭 요거트 4입",
+  "price": 12800,
+  "rating": 4.5,
+  "reviewCount": 156,
+  "image": "https://picsum.photos/id/292/800/600",
+  "category": "food"
+ },
+ {
+  "id": "10",
+  "name": "태블릿 스탠드 키보드 세트",
+  "price": 129000,
+  "rating": 4.4,
+  "reviewCount": 42,
+  "image": "https://picsum.photos/id/119/800/600",
+  "category": "electronics"
+ },
+ {
+  "id": "11",
+  "name": "린넨 와이드 팬츠",
+  "price": 52000,
+  "originalPrice": 65000,
+  "rating": 4.8,
+  "reviewCount": 95,
+  "image": "https://picsum.photos/id/247/800/600",
+  "category": "clothing",
+  "badges": ["SALE"]
+ },
+ {
+  "id": "12",
+  "name": "유기농 견과류 믹스 500g",
+  "price": 22000,
+  "rating": 4.9,
+  "reviewCount": 210,
+  "image": "https://picsum.photos/id/312/800/600",
+  "category": "food",
+  "badges": ["HOT"]
+ },
+ {
+  "id": "13",
+  "name": "휴대용 차량용 청소기",
+  "price": 45000,
+  "rating": 4.3,
+  "reviewCount": 67,
+  "image": "https://picsum.photos/id/24/800/600",
+  "category": "electronics"
+ },
+ {
+  "id": "14",
+  "name": "캐시미어 블렌드 니트",
+  "price": 89000,
+  "originalPrice": 110000,
+  "rating": 4.9,
+  "reviewCount": 134,
+  "image": "https://picsum.photos/id/268/800/600",
+  "category": "clothing",
+  "badges": ["SALE", "HOT"]
+ },
+ {
+  "id": "15",
+  "name": "콜드브루 원두 1kg",
+  "price": 28000,
+  "rating": 4.7,
+  "reviewCount": 289,
+  "image": "https://picsum.photos/id/225/800/600",
+  "category": "food",
+  "badges": ["NEW"]
+ },
+ {
+  "id": "16",
+  "name": "멀티포트 USB-C 허브",
+  "price": 59000,
+  "rating": 4.5,
+  "reviewCount": 78,
+  "image": "https://picsum.photos/id/119/800/600",
+  "category": "electronics"
+ },
+ {
+  "id": "17",
+  "name": "울 블렌드 코트",
+  "price": 189000,
+  "originalPrice": 229000,
+  "rating": 4.8,
+  "reviewCount": 52,
+  "image": "https://picsum.photos/id/182/800/600",
+  "category": "clothing",
+  "badges": ["SALE"]
+ },
+ {
+  "id": "18",
+  "name": "직화 그라놀라 시리얼",
+  "price": 9500,
+  "rating": 4.6,
+  "reviewCount": 412,
+  "image": "https://picsum.photos/id/292/800/600",
+  "category": "food"
+ },
+ {
+  "id": "19",
+  "name": "스탠딩 데스크 LED 조명",
+  "price": 78000,
+  "rating": 4.4,
+  "reviewCount": 33,
+  "image": "https://picsum.photos/id/274/800/600",
+  "category": "electronics",
+  "badges": ["NEW"]
+ },
+ {
+  "id": "20",
+  "name": "기모 맨투맨 티셔츠",
+  "price": 38000,
+  "rating": 4.7,
+  "reviewCount": 168,
+  "image": "https://picsum.photos/id/268/800/600",
+  "category": "clothing"
+ },
+ {
+  "id": "21",
+  "name": "프로틴 쉐이크 12팩",
+  "price": 42000,
+  "originalPrice": 52000,
+  "rating": 4.8,
+  "reviewCount": 201,
+  "image": "https://picsum.photos/id/312/800/600",
+  "category": "food",
+  "badges": ["SALE", "HOT"]
+ },
+ {
+  "id": "22",
+  "name": "무선 충전 거치대",
+  "price": 35000,
+  "rating": 4.5,
+  "reviewCount": 94,
+  "image": "https://picsum.photos/id/175/800/600",
+  "category": "electronics"
+ },
+ {
+  "id": "23",
+  "name": "레귤러핏 슬랙스",
+  "price": 72000,
+  "rating": 4.6,
+  "reviewCount": 61,
+  "image": "https://picsum.photos/id/247/800/600",
+  "category": "clothing",
+  "badges": ["NEW"]
+ },
+ {
+  "id": "24",
+  "name": "저당 다크 초콜릿 3종",
+  "price": 15000,
+  "rating": 4.9,
+  "reviewCount": 178,
+  "image": "https://picsum.photos/id/108/800/600",
+  "category": "food"
+ },
+ {
+  "id": "25",
+  "name": "게이밍 마우스 패드 XL",
+  "price": 25000,
+  "rating": 4.4,
+  "reviewCount": 112,
+  "image": "https://picsum.photos/id/96/800/600",
+  "category": "electronics"
+ }
+]
